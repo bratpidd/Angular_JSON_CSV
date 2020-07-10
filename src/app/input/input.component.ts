@@ -23,12 +23,12 @@ export class InputComponent implements OnInit {
     this.inputString = this.contentService.inputString;
   }
   onSubmit(textarea): void {
-    try {
-      this.contentService.setString(textarea.text);
+     try {
+      this.contentService.parseString(textarea.text);
       this.router.navigate(['edit']);
-    } catch (e) {
-      alert(e);
-    }
+     } catch (e) {
+      this.contentService.addAlert(e);
+     }
   }
   loadExample(type: string): void {
     switch(type) {

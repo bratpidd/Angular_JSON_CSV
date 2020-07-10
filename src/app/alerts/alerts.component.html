@@ -1,0 +1,6 @@
+<div *ngIf="contentService.alerts.length" class="mt-5">
+  <h2>Alerts</h2>
+  <div class="alert" [class.alert-danger]="i===0" [class.alert-warning]="i>0" *ngFor="let alert of contentService.alerts; index as i" >
+    {{alert}}
+  </div>
+</div>

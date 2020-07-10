@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
 import { EditComponent } from './edit/edit.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
-    EditComponent
+    EditComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,

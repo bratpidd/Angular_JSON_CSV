@@ -1,9 +1,10 @@
 <div class="container">
-  <h3>Объект JSON/JSON5/CSV</h3>
+  <h3>Объект JSON/CSV</h3>
   <form [formGroup]="inputForm" (ngSubmit)="onSubmit(inputForm.value)">
     <textarea class="form-control mb-2" rows="6" id="text" formControlName="text" [(ngModel)]="inputString"></textarea>
     <button type="submit" class="btn btn-primary">Перейти к редактированию</button>
-    <button class="btn btn-success float-right" (click)="loadExample('JSON')" type="button">Пример JSON5</button>
+    <button class="btn btn-success float-right" (click)="loadExample('JSON')" type="button">Пример JSON</button>
     <button class="btn btn-success float-right mr-2" (click)="loadExample('CSV')" type="button">Пример CSV</button>
   </form>
+  <app-alerts></app-alerts>
 </div>

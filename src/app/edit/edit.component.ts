@@ -12,9 +12,12 @@ export class EditComponent implements OnInit {
   keys = [];
   outputString = '';
   outFormat;
-  constructor(private contentService: ContentService,
+  constructor(public contentService: ContentService,
               private router: Router) {
     this.data = this.contentService.data;
+    if (!this.data) {
+      this.router.navigate(['input']);
+    }
     const keysRow = this.data[0]; // assuming keys in each row are the same
    // alert (JSON.stringify(this.data));
     Object.keys(keysRow).forEach(key => {
@@ -51,6 +54,7 @@ export class EditComponent implements OnInit {
   }
   goBack(){
     this.router.navigate(['input']);
+    this.contentService.clearAlerts();
   }
   ngOnInit(): void {
   }

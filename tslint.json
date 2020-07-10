@@ -123,12 +123,15 @@
       "options": [
         "check-branch",
         "check-decl",
-        "check-operator",
+       // "check-operator",
         "check-separator",
         "check-type",
         "check-typecast"
       ]
     },
+    "no-trailing-spaces": [2, { "skipBlankLines": true }],
+    "jsx-no-lambda": false,
+    "no-string-literal": false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,

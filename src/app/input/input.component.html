@@ -1,0 +1,7 @@
+<div class="container">
+  <h3>Объект JSON/JSON5/CSV</h3>
+  <form [formGroup]="inputForm" (ngSubmit)="onSubmit(inputForm.value)">
+    <textarea class="form-control" rows="6" id="text" formControlName="text"></textarea>
+    <button type="submit" class="btn btn-primary mt-2">Перейти к редактированию</button>
+  </form>
+</div>
